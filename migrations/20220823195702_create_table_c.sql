@@ -1,0 +1,5 @@
+CREATE TABLE IF NOT EXISTS table_c
+(
+    id_c   BIGSERIAL PRIMARY KEY,
+    name_c TEXT    NOT NULL
+);
