@@ -5,6 +5,10 @@ use std::env;
 #[tokio::main]
 async fn main() -> anyhow::Result<()> {
     let database = env::var("DATABASE_URL")?;
+
+    println!("CARGO_PKG_NAME {}", env::var("CARGO_PKG_NAME")?);
+    println!("CARGO_CRATE_NAME {}", env::var("CARGO_CRATE_NAME")?);
+
     let pool = PgPool::connect(&database).await?;
 
     // Insert a new, random row.

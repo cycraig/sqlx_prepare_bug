@@ -1,0 +1,17 @@
+CREATE TABLE IF NOT EXISTS table_a
+(
+    id_a   BIGSERIAL PRIMARY KEY,
+    name_a TEXT    NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS table_b
+(
+    id_b   BIGSERIAL PRIMARY KEY,
+    name_b TEXT    NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS table_c
+(
+    id_c   BIGSERIAL PRIMARY KEY,
+    name_c TEXT    NOT NULL
+);

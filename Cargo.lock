@@ -105,7 +105,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "crate_c"
+name = "crate_ç"
 version = "0.1.0"
 dependencies = [
  "anyhow",
