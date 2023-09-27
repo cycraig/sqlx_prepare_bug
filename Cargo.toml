@@ -1,7 +1,24 @@
 [workspace]
-resolver = "2"
 members = [
   "cratea",
   "crate-b",
-  "crate_c",
+  "crate_ç",
 ]
+resolver = "2"
+
+[workspace.package]
+edition = "2021"
+publish = false
+
+[workspace.dependencies]
+anyhow = { version = "1.0.75" }
+rand = { version = "0.8.5" }
+#sqlx = { git = "https://github.com/cycraig/sqlx", branch = "fix/prepare-race-condition", default-features = false, features = ["macros", "postgres", "runtime-tokio-rustls"] }
+sqlx = { version = "0.7.2", default-features = false, features = ["macros", "postgres", "runtime-tokio"] }
+tokio = { version = "1.32.0", features = ["macros", "rt-multi-thread"]}
+
+[profile.dev.package.sqlx-macros]
+opt-level = 3
+
+[profile.dev.package.sqlx-macros-core]
+opt-level = 3
